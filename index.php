@@ -25,8 +25,13 @@ function __autoload($class)
 	//echo '$class=' .$class . '<hr>';
 	$cariFail = GetMatchingFiles(GetContents('aplikasi'),$class . '.php');
 	//echo '<pre>$cariFail='; print_r($cariFail) . '</pre>';
-	echo '$class->' . $class . '|' . $cariFail[0] . '<br>';
-	if (isset($cariFail[0])) require $cariFail[0];
+	//echo '<br>$class->' . $class . '|' . $cariFail[0] . '|';
+	if (isset($cariFail[0])) 
+	{	require $cariFail[0];
+		if (!class_exists($class)): 
+			echo '<br>class ' . $class . ' tak wujud<br>';
+		endif;
+	}
 	else echo 'fail class ' . $class . ' tidak wujud <br>';
 }
 
