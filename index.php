@@ -25,8 +25,9 @@ function __autoload($class)
 	//echo '$class=' .$class . '<hr>';
 	$cariFail = GetMatchingFiles(GetContents('aplikasi'),$class . '.php');
 	//echo '<pre>$cariFail='; print_r($cariFail) . '</pre>';
-	//echo '$failPustaka->' . $cariFail[0] . '<br>';
-	require $cariFail[0];
+	echo '$class->' . $class . '|' . $cariFail[0] . '<br>';
+	if (isset($cariFail[0])) require $cariFail[0];
+	else echo 'fail class ' . $class . ' tidak wujud <br>';
 }
 
 # 5. istihar class Mulakan
