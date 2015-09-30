@@ -27,8 +27,9 @@ class Mulakan
          */
  
         $failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
+		echo '<br>$failKawal->'; print_r($failKawal) . '';
 		$fail = $failKawal[0];
-        //echo '<hr>$failKawal->' . $fail . '<br>';
+        echo '<hr>$fail ' . KAWAL . '->' . $fail . '<br>';
          
         /*
          * 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
@@ -72,7 +73,11 @@ class Mulakan
         $panjang = count($url); //echo '$panjang=' . $panjang . '<br>';
  
         // Pastikan kaedah yang kita panggil wujud
-        if ($panjang > 1)
+        if ($panjang >= 9)
+		{
+			$this->paramPanjangSangat($panjang);
+		}
+		elseif ($panjang > 1)
         {
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}
@@ -135,6 +140,14 @@ class Mulakan
         require KAWAL . '/sesat.php';
         $kawal = new Sesat();
         $kawal->parameter();
+        return false;
+    }
+
+	function paramPanjangSangat($bilParam)
+    {
+        require KAWAL . '/sesat.php';
+        $kawal = new Sesat();
+        $kawal->paramPanjangSangat($bilParam);
         return false;
     }
 
