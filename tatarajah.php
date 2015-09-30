@@ -1,9 +1,9 @@
 <?php
 # 4 folder utama dalam crud
-define('KAWAL', 'aplikasi/kawal');
-define('PAPAR', 'aplikasi/papar');
-define('TANYA', 'aplikasi/tanya');
-define('PUSTAKA', 'aplikasi/pustaka');
+define('KAWAL', 'aplikasi/kawal/');
+define('PAPAR', 'aplikasi/papar/');
+define('TANYA', 'aplikasi/tanya/');
+define('PUSTAKA', 'aplikasi/pustaka/');
 
 # Fungsi Global
 require PUSTAKA . '/Fungsi.php';
