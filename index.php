@@ -16,7 +16,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('Asia/Kuala_Lumpur');
  
 # 3. setkan tatarajah sistem
-require 'tatarajah.php';
+require 'tatarajah2.php';
 
 # 4. masukkan semua fail class dari folder PUSTAKA
 #    Also spl_autoload_register (Take a look at it if you like)
