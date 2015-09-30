@@ -1,6 +1,3 @@
-php_flag display_errors on
-php_value error_reporting 9999
-
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
