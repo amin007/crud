@@ -145,4 +145,29 @@ class Mulakan
         return false;
     }
 
+	function classKawalTidakWujud($amaran)
+    {
+        require KAWAL . 'sesat.php';
+        $kawal = new Sesat();
+        $kawal->classTidakWujud($amaran);
+        return false;
+    }
+		
+	public static function classTanyaTidakWujud($amaran)
+    {
+        require KAWAL . 'sesat.php';
+        $kawal = new Sesat();
+        $kawal->classTidakWujud($amaran);
+        //return false;
+		exit;
+    }
+	
+	public static function failPaparTidakWujud()
+    {
+        require KAWAL . 'sesat.php';
+        $kawal = new Sesat();
+        $kawal->failTidakWujud();
+        return false;
+    }
+
 }
