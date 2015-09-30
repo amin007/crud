@@ -26,10 +26,9 @@ class Mulakan
          * dan masukkan dalam $fail
          */
  
-        $failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
-		echo '<br>$failKawal->'; print_r($failKawal) . '';
+		$failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
 		$fail = $failKawal[0];
-        echo '<hr>$fail ' . KAWAL . '->' . $fail . '<br>';
+        //echo '<hr>$fail ' . KAWAL . '->' . $fail . '<br>';
          
         /*
          * 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
@@ -38,8 +37,7 @@ class Mulakan
          */
         if (file_exists($fail))
         {
-			require $fail;
-			$kawal = new $url[0];
+			$kawal = new $url[0];/*
 			$kawal->muatTanya($url[0]);
 			# jika $url[1] tak disetkan, bagi $method='index'
 			$method = (isset($url[1])) ? $url[1] : 'index';
@@ -47,12 +45,12 @@ class Mulakan
 			if ( !method_exists($kawal, $method))
 				$this->parameter();			
 			else $this->cari_pengawal($kawal, $url);
-			
+			//*/
         }
         else
         {
             $this->sesat();
-        }
+        }//*/
          
     }
 
@@ -70,14 +68,10 @@ class Mulakan
      
     private function cari_pengawal($kawal, $url)
     {
-        $panjang = count($url); //echo '$panjang=' . $panjang . '<br>';
- 
-        // Pastikan kaedah yang kita panggil wujud
-        if ($panjang >= 9)
-		{
-			$this->paramPanjangSangat($panjang);
-		}
-		elseif ($panjang > 1)
+        $panjang = count($url); echo '$panjang=' . $panjang . '<br>';
+		/*
+        // Pastikan kaedah yang kita panggil wujud	
+		if ($panjang > 1)
         {
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}
@@ -124,7 +118,7 @@ class Mulakan
 				$kawal->index();
 				break;
 			}
-		
+		//*/
     }
     
     function sesat()
