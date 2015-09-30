@@ -26,7 +26,7 @@ class Sesat extends Kawal
 	{
 		echo '<br>class Sesat::paramPanjangSangat($bilParam = ' . $bilParam . ') extends Kawal';
 		$this->papar->mesej = 'Class wujud tapi parameter/method/fungsi tidak wujud';
-		$this->papar->baca('sesat/index');
+		//$this->papar->baca('sesat/index');
 	}
 #--------------------------------------------------------------------------------------#
 }
