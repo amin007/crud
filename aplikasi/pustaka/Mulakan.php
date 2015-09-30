@@ -37,7 +37,7 @@ class Mulakan
          */
         if (file_exists($fail))
         {
-			$kawal = new $url[0];/*
+			$kawal = new $url[0];
 			$kawal->muatTanya($url[0]);
 			# jika $url[1] tak disetkan, bagi $method='index'
 			$method = (isset($url[1])) ? $url[1] : 'index';
@@ -69,48 +69,48 @@ class Mulakan
     private function cari_pengawal($kawal, $url)
     {
         $panjang = count($url); echo '$panjang=' . $panjang . '<br>';
-		/*
-        // Pastikan kaedah yang kita panggil wujud	
+		
+        # Pastikan kaedah yang kita panggil wujud	
 		if ($panjang > 1)
         {
 			if (!method_exists($kawal, $url[1])) {$this->parameter();}
 		}
 			
-			// Tentukan apa yang dimuatkan		
+			# Tentukan apa yang dimuatkan		
 			switch ($panjang)
 			{
 				case 8:
-				//Kawal->Kaedah(Param2, Param3, Param4, Param5)
+				# Kawal->Kaedah(Param2, Param3, Param4, Param5)
 				$kawal->{$url[1]}($url[2], $url[3], $url[4], $url[5], $url[6], $url[7]);
 				break;
 
 				case 7:
-				//Kawal->Kaedah(Param2, Param3, Param4, Param5)
+				# Kawal->Kaedah(Param2, Param3, Param4, Param5)
 				$kawal->{$url[1]}($url[2], $url[3], $url[4], $url[5], $url[6]);
 				break;
 
 				case 6:
-				//Kawal->Kaedah(Param2, Param3, Param4, Param5)
+				# Kawal->Kaedah(Param2, Param3, Param4, Param5)
 				$kawal->{$url[1]}($url[2], $url[3], $url[4], $url[5]);
 				break;
 	 
 				case 5:
-				//Kawal->Kaedah(Param2, Param3, Param4)
+				# Kawal->Kaedah(Param2, Param3, Param4)
 				$kawal->{$url[1]}($url[2], $url[3], $url[4]);
 				break;
 	 
 				case 4:
-				//Kawal->Kaedah(Param2, Param3)
+				# Kawal->Kaedah(Param2, Param3)
 				$kawal->{$url[1]}($url[2], $url[3]);
 				break;
 	 
 				case 3:
-				//Kawal->Kaedah(Param2)
+				# Kawal->Kaedah(Param2)
 				$kawal->{$url[1]}($url[2]);
 				break;
 	 
 				case 2:
-				//Kawal->Kaedah()
+				# Kawal->Kaedah()
 				$kawal->{$url[1]}();
 				break;
 	 
