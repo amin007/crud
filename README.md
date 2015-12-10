@@ -2,7 +2,7 @@
 Langkah asas untuk fahamkan **mvc melayu**
 
 # fungsi __autoload
-```
+```php
 function __autoload($class)
 {
 	$cariFail = classFolder($class);
