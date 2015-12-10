@@ -27,7 +27,7 @@ function __autoload($class)
 | $class->index   | $fail->aplikasi/kawal/index.php     |
 | $class->Kawal   | $fail->aplikasi/pustaka/Kawal.php   |
 
-> => Ini class Index extends Kawal 
+> Ini class Index extends Kawal 
 
 | Class           | Fail                                      |
 | --------------- | ------------------------------------------|
@@ -35,7 +35,7 @@ function __autoload($class)
 | $class->Index_Tanya | $fail->aplikasi/tanya/index_tanya.php |
 | $class->Tanya       | $fail->aplikasi/pustaka/Tanya.php     |
 
-> => Ini class Index_Tanya extends Tanya 
+> Ini class Index_Tanya extends Tanya 
 
 | Class           | Fail                                           |
 | --------------- | -----------------------------------------------|
