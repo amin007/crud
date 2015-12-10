@@ -139,7 +139,7 @@ class Mulakan
 
 	function paramPanjangSangat($bilParam)
     {
-        require KAWAL . '/sesat.php';
+        require KAWAL . 'sesat.php';
         $kawal = new Sesat();
         $kawal->paramPanjangSangat($bilParam);
         return false;
