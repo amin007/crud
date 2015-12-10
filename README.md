@@ -64,5 +64,10 @@ Belum ada idea mahu tulis.
 
 Belum ada idea mahu tulis.
 
+----
+## Changelog
+* 10 Disember 2015 - Asyik berubah2 hari ini
+
+----
 ## Kredit
-[JREAM](https://github.com/JREAM)
+* [JREAM](https://github.com/JREAM)
