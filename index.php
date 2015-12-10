@@ -23,7 +23,7 @@ require 'tatarajah2.php';
 function __autoload($class)
 {
 	$cariFail = GetMatchingFiles(GetContents('aplikasi'),$class . '.php');
-	echo '<br>Utama :: $class->' . $class . ' || $fail->' . $cariFail[0] . '|';
+	echo '<br>Utama :: $class->' . $class . ' || $fail->' . $cariFail[0];
 	if (isset($cariFail[0])) 
 	{	require $cariFail[0];
 		if (!class_exists($class)): 
@@ -31,7 +31,9 @@ function __autoload($class)
 		endif;
 	}
 	else echo 'fail class ' . $class . ' tidak wujud <br>';
+	
 }
 
 # 5. istihar class Mulakan
-$aplikasi = new Mulakan();
+//$aplikasi = new Mulakan();
+new Mulakan;
