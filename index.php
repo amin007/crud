@@ -35,7 +35,7 @@ function __autoload($class)
 }
 
 # 5. istihar class Mulakan
-//$aplikasi = new Mulakan();
-use \Aplikasi\Pustaka\Mulakan as Test;
-//use Mulakan as Test;
-$aplikasi = new Test();
+$aplikasi = new Mulakan();
+//require('aplikasi/pustaka/Mulakan.php'); 
+//use aplikasi\pustaka\Mulakan;
+//$aplikasi = new Mulakan('index');
