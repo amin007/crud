@@ -4,7 +4,7 @@ Langkah asas untuk fahamkan **mvc melayu**
 ----
 ## Code Example / Contoh Kod
 
-# fungsi __autoload
+### fungsi __autoload
 ```php
 function __autoload($class)
 {
@@ -20,7 +20,7 @@ function __autoload($class)
 }
 ```
 
-# Output
+### Output
 | Class           | Fail                                |
 | --------------- | ----------------------------------- |
 | $class->Mulakan | $fail->aplikasi/pustaka/Mulakan.php |
@@ -43,28 +43,22 @@ function __autoload($class)
 
 ----
 ## Motivation / Motivasi
-
-Untuk memertabatkan bahasa melayu dalam dunia programing
+* Untuk memertabatkan bahasa melayu dalam dunia programing
 
 ## Installation / Pemasangan
-
-Muatturun dan buka fail zip
+* Muat turun dan buka fail zip
 
 ## API Reference / Rujukan API
-
-Belum ada idea mahu tulis.
+* Belum ada idea mahu tulis.
 
 ## Tests / Ujian
-
-Belum ada idea mahu tulis.
+* Belum ada idea mahu tulis.
 
 ## Contributors
-
-Belum ada idea mahu tulis.
+* Belum ada idea mahu tulis.
 
 ## License
-
-Belum ada idea mahu tulis.
+* Belum ada idea mahu tulis.
 
 ----
 ## Changelog
