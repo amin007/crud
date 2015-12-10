@@ -30,10 +30,12 @@ function __autoload($class)
 			echo '<br>class ' . $class . ' tak wujud<br>';
 		endif;
 	}
-	else echo 'fail class ' . $class . ' tidak wujud <br>';
+	else echo '<br>fail class ' . $class . ' tidak wujud <br>';
 	
 }
 
 # 5. istihar class Mulakan
 //$aplikasi = new Mulakan();
-new Mulakan();
+use \Aplikasi\Pustaka\Mulakan as Test;
+//use Mulakan as Test;
+$aplikasi = new Test();
