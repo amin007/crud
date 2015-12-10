@@ -1,7 +1,7 @@
 # crud
 Langkah asas untuk fahamkan mvc melayu
 
-# fungsi autoload
+# fungsi __autoload
 ```
 function __autoload($class)
 {
@@ -18,6 +18,7 @@ function __autoload($class)
 ```
 
 # Output
+```
 Utama :: $class->Mulakan || $fail->aplikasi/pustaka/Mulakan.php
 Utama :: $class->index || $fail->aplikasi/kawal/index.php
 Utama :: $class->Kawal || $fail->aplikasi/pustaka/Kawal.php
@@ -27,3 +28,4 @@ Utama :: $class->Index_Tanya || $fail->aplikasi/tanya/index_tanya.php
 Utama :: $class->Tanya || $fail->aplikasi/pustaka/Tanya.php
 => Ini class Index_Tanya extends Tanya
 Utama :: $class->PangkalanData || $fail->aplikasi/pustaka/PangkalanData.php
+```
