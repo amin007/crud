@@ -1,5 +1,7 @@
-# crud
+## Synopsis / Penerangan
 Langkah asas untuk fahamkan **mvc melayu**
+
+## Code Example / Contoh Kod
 
 # fungsi __autoload
 ```php
@@ -32,6 +34,29 @@ function __autoload($class)
 |----- | --------------- | ------------------------------------------------ |
 |Utama |$class->PangkalanData | $fail->aplikasi/pustaka/PangkalanData.php |
 
+## Motivation / Motivasi
 
-# Kredit
+Untuk memertabatkan bahasa melayu dalam dunia programing
+
+## Installation / Pemasangan
+
+Muatturun dan buka fail zip
+
+## API Reference / Rujukan API
+
+Belum ada idea mahu tulis.
+
+## Tests / Ujian
+
+Belum ada idea mahu tulis.
+
+## Contributors
+
+Belum ada idea mahu tulis.
+
+## License
+
+Belum ada idea mahu tulis.
+
+## Kredit
 [JREAM](https://github.com/JREAM)
