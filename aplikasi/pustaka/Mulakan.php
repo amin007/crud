@@ -6,9 +6,10 @@
  * 3. dapatkan fail dalam folder KAWAL yang serupa dengan $url[0]
  * 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
  */
+
 class Mulakan
 {
- 
+#--------------------------------------------------------------------------------------#
     function __construct()
     {
         # 1. guna fungsi dpt_url() dari fail fungsi.php
@@ -27,22 +28,20 @@ class Mulakan
          */
  
 		$failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
-		$fail = $failKawal[0];
-        //echo '<hr>$fail ' . KAWAL . '->' . $fail . '<br>';
+        //echo '<hr>$fail ' . KAWAL . '->' . $failKawal[0] . '<br>';
          
-        /*
-         * 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
+        /* 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
          * jika ya : masukkan $fail dan isytihar class tersebut
          * jika tak : cari fungsi sesat()
          */
-        if (file_exists($fail))
-        {
+		if (file_exists($failKawal[0]))
+		{
 			$kawal = new $url[0];
-			$kawal->muatTanya($url[0]);
+			$kawal->muatTanya($url[0]);/*
 			# jika $url[1] tak disetkan, bagi $method='index'
 			$method = (isset($url[1])) ? $url[1] : 'index';
 			# semak sama ada method ada dalam $kawal
-			if ( !method_exists($kawal, $method))
+			if ( !method_exists($kawal, $method) )
 				$this->parameter();			
 			else $this->cari_pengawal($kawal, $url);
 			//*/
@@ -169,5 +168,5 @@ class Mulakan
         $kawal->failTidakWujud();
         return false;
     }
-
+#--------------------------------------------------------------------------------------#
 }
