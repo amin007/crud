@@ -25,13 +25,17 @@ function __autoload($class)
 |Utama | $class->Mulakan | $fail->aplikasi/pustaka/Mulakan.php |
 |Utama | $class->index   | $fail->aplikasi/kawal/index.php     |
 |Utama | $class->Kawal   | $fail->aplikasi/pustaka/Kawal.php   |
-=> Ini class Index extends Kawal 
+
+*=>Ini class Index extends Kawal *
+
 |Lokasi| Class           | Fail                                           |
 |----- | --------------- | -----------------------------------------------|
 |Utama | $class->Papar       | $fail->aplikasi/pustaka/Papar.php          |
 |Utama | $class->Index_Tanya | $fail->aplikasi/tanya/index_tanya.php      |
 |Utama | $class->Tanya       | $fail->aplikasi/pustaka/Tanya.php          |
-=> Ini class Index_Tanya extends Tanya 
+
+*=> Ini class Index_Tanya extends Tanya *
+
 |Lokasi| Class           | Fail                                           |
 |----- | --------------- | -----------------------------------------------|
 |Utama |$class->PangkalanData | $fail->aplikasi/pustaka/PangkalanData.php |
