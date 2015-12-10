@@ -27,7 +27,6 @@ class Kawal
 		{
 			$tanyaNama = ucfirst($nama) . '_Tanya';
 			$this->tanya = new $tanyaNama();
-			
 		}//*/
 	
 	}
