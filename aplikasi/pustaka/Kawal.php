@@ -12,8 +12,8 @@ class Kawal
 	public function muatTanya($nama) 
 	{
 		
-        $failTanya = GetMatchingFiles(GetContents(TANYA),$nama . '_tanya.php');
-		$path = $failTanya[0];
+        //$failTanya = GetMatchingFiles(GetContents(TANYA),$nama . '_tanya.php');
+		//$path = $failTanya[0];
 		//$path = TANYA . $nama . '_tanya.php';
 		//echo '<br> class Kawal :: $nama : ' . $nama . '|';
 		//echo 'TANYA->' . TANYA . '|';
@@ -22,7 +22,7 @@ class Kawal
 		//echo '$path->' . $path . '<br>';
 		//$tanyaNAMA = ucfirst($nama) . '_Tanya';
 		//echo '<br>$tanyaNAMA->' . $tanyaNAMA . '<br>';
-		
+		/*
 		if (file_exists($path)) 
 		{
 			$tanyaNama = ucfirst($nama) . '_Tanya';
@@ -34,8 +34,8 @@ class Kawal
 			if (class_exists($tanyaNama)) echo '<br>class ' . $tanyaNama . ' wujud<br>';
 			else echo '<br>class ' . $tanyaNama . ' tak wujud<br>';
 			*/
-		}
-					
+		}//*/
+	
 	}
-
+#####################################################################################################
 }
