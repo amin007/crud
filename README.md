@@ -18,7 +18,7 @@ function __autoload($class)
 ```
 
 # Output
-```
+```html
 Utama :: $class->Mulakan || $fail->aplikasi/pustaka/Mulakan.php
 Utama :: $class->index || $fail->aplikasi/kawal/index.php
 Utama :: $class->Kawal || $fail->aplikasi/pustaka/Kawal.php
