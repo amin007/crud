@@ -25,6 +25,7 @@ function __autoload($class)
 |Utama | $class->Mulakan | $fail->aplikasi/pustaka/Mulakan.php              |
 |Utama | $class->index   | $fail->aplikasi/kawal/index.php |
 |Utama | $class->Kawal   | $fail->aplikasi/pustaka/Kawal.php |
+| :---: | -----
 |=> Ini class Index extends Kawal |
 |----- | --------------- | ------------------------------------------------ |
 |Utama | $class->Papar       | $fail->aplikasi/pustaka/Papar.php          |
