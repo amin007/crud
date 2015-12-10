@@ -5,7 +5,7 @@ class Index extends Kawal
 #--------------------------------------------------------------------------------------#
 	function __construct() 
 	{
-		echo '<br>class Index extends Kawal';
+		echo '<br>=> Ini class Index extends Kawal';
 		parent::__construct();
         //Kebenaran::kawalMasuk();
 	}
