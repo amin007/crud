@@ -10,6 +10,34 @@ function dpt_url()
 	return $url;
 }
 
+function classFolder($className,$folder='aplikasi') 
+{
+    $dir=dir(ROOT_DIR . $folder);
+    if($folder=='aplikasi' && file_exists(ROOT_DIR . $folder . '/' . $className . '.php')) 
+		return $folder . '/' . $className . '.php';
+    else 
+	{
+        while (false!==($entry=$dir->read())) {
+            $checkFolder = $folder . '/' . $entry;
+            if(strlen($entry)>2) 
+			{
+                if(is_dir(ROOT_DIR . $checkFolder)) 
+				{
+                    if(file_exists(ROOT_DIR . $checkFolder . '/' . $className . '.php')) 
+						return $checkFolder . '/' . $className . '.php';
+                    else 
+					{
+                        $subFolder=classFolder($className,$checkFolder);
+                        if($subFolder) return $subFolder;
+                    }
+                }
+            }
+        }
+    }
+    $dir->close();
+    return 0;
+}
+
 function pecah_post()
 {
 	$papar['pilih'] = isset($_POST['pilih']) ? $_POST['pilih'] : null;
