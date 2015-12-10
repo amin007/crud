@@ -6,7 +6,7 @@
  * 3. dapatkan fail dalam folder KAWAL yang serupa dengan $url[0]
  * 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
  */
-namespace Aplikasi\Pustaka;
+//namespace aplikasi\pustaka;
 class Mulakan
 {
 #--------------------------------------------------------------------------------------#
