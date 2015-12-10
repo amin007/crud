@@ -10,7 +10,7 @@ class Index extends Kawal
         //Kebenaran::kawalMasuk();
 	}
 	
-	function index() 
+	public function index() 
 	{
 		echo '<br>class Index::index() extends Kawal';
 		# Set pemboleubah utama
