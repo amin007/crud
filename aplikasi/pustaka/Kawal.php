@@ -2,40 +2,34 @@
 
 class Kawal 
 {
-
+#--------------------------------------------------------------------------------------#
 	function __construct() 
 	{
-		//echo '<br>class Kawal';
+		//echo '=>class Kawal';
 		$this->papar = new Papar();
 	}
 	
 	public function muatTanya($nama) 
 	{
-		
-        //$failTanya = GetMatchingFiles(GetContents(TANYA),$nama . '_tanya.php');
-		//$path = $failTanya[0];
-		//$path = TANYA . $nama . '_tanya.php';
-		//echo '<br> class Kawal :: $nama : ' . $nama . '|';
-		//echo 'TANYA->' . TANYA . '|';
-		//echo 'senarai fail -><pre>'; print_r(GetContents(TANYA)) . '</pre>|';
-		//echo '$failTanya->'; print_r($failTanya) . '|';
-		//echo '$path->' . $path . '<br>';
-		//$tanyaNAMA = ucfirst($nama) . '_Tanya';
-		//echo '<br>$tanyaNAMA->' . $tanyaNAMA . '<br>';
-		/*
-		if (file_exists($path)) 
+        /* 1. dapatkan fail dalam folder TANYA yang serupa dengan $nama
+         * dan masukkan dalam $failTanya
+         */
+ 
+		$failTanya = GetMatchingFiles(GetContents(TANYA),$nama . '_tanya.php');
+        //echo '<hr>$fail ' . TANYA . '->' . $failTanya[0] . '<br>';
+         
+        /* 2. semak sama ada dalam folder TANYA $fail benar2 wujud
+         * jika ya : masukkan $fail dan isytihar class tersebut
+         * jika tak : cari fungsi sesat()
+         */
+
+		if (file_exists($failTanya[0])) 
 		{
 			$tanyaNama = ucfirst($nama) . '_Tanya';
-			//echo '<br>$tanyaNama->' . $tanyaNama . '<br>';
-			
-			require_once $path;
 			$this->tanya = new $tanyaNama();
-			/*
-			if (class_exists($tanyaNama)) echo '<br>class ' . $tanyaNama . ' wujud<br>';
-			else echo '<br>class ' . $tanyaNama . ' tak wujud<br>';
-			*/
+			
 		}//*/
 	
 	}
-#####################################################################################################
+#--------------------------------------------------------------------------------------#
 }
