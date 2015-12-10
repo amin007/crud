@@ -1,6 +1,7 @@
 ## Synopsis / Penerangan
 Langkah asas untuk fahamkan **mvc melayu**
 
+----
 ## Code Example / Contoh Kod
 
 # fungsi __autoload
@@ -40,6 +41,7 @@ function __autoload($class)
 | --------------- | -----------------------------------------------|
 |$class->PangkalanData | $fail->aplikasi/pustaka/PangkalanData.php |
 
+----
 ## Motivation / Motivasi
 
 Untuk memertabatkan bahasa melayu dalam dunia programing
