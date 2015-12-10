@@ -36,4 +36,4 @@ function __autoload($class)
 
 # 5. istihar class Mulakan
 //$aplikasi = new Mulakan();
-new Mulakan;
+new Mulakan();
