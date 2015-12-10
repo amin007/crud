@@ -22,10 +22,8 @@ require 'tatarajah2.php';
 #    Also spl_autoload_register (Take a look at it if you like)
 function __autoload($class)
 {
-	//echo '$class=' .$class . '<hr>';
 	$cariFail = GetMatchingFiles(GetContents('aplikasi'),$class . '.php');
-	//echo '<pre>$cariFail='; print_r($cariFail) . '</pre>';
-	//echo '<br>$class->' . $class . '|' . $cariFail[0] . '|';
+	echo '<br>Utama :: $class->' . $class . ' || $fail->' . $cariFail[0] . '|';
 	if (isset($cariFail[0])) 
 	{	require $cariFail[0];
 		if (!class_exists($class)): 
