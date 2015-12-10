@@ -29,3 +29,6 @@ Utama :: $class->Tanya || $fail->aplikasi/pustaka/Tanya.php
 => Ini class Index_Tanya extends Tanya
 Utama :: $class->PangkalanData || $fail->aplikasi/pustaka/PangkalanData.php
 ```
+
+# Kredit
+[JREAM](https://github.com/JREAM)
