@@ -1,45 +1,48 @@
 ## Synopsis / Penerangan
-Langkah asas untuk fahamkan **mvc melayu**
+Langkah asas untuk memahami **mvc melayu**
 
 ----
 ## Code Example / Contoh Kod
 
 ### fungsi __autoload
 ```php
-function __autoload($class)
+# guna contoh http://www.php-fig.org/psr/psr-4/examples/
+spl_autoload_register(function ($class) 
 {
-	$cariFail = classFolder($class);
-	echo '<br>Utama :: class ' . $class . ' | fail=>' . $cariFail;
-	if (isset($cariFail[0])) 
-	{	require $cariFail[0];
-		if (!class_exists($class)): 
-			echo '<br>class ' . $class . ' tak wujud<br>';
-		endif;
-	}
-	else echo 'fail class ' . $class . ' tidak wujud <br>';
-}
+    # project-specific namespace prefix
+    $prefix = 'Foo\\Bar\\'; //echo '<br>' . $prefix;
+
+    # base directory for the namespace prefix
+    $base_dir = __DIR__ . '/' . PUSTAKA . 'vendor/foo.bar/src/'; //echo '<br>' . $base_dir;
+
+    # does the class use the namespace prefix?
+    $len = strlen($prefix); //echo '<br>' . $len;
+    if (strncmp($prefix, $class, $len) !== 0) 
+        # no, move to the next registered autoloader
+        return;
+
+    # get the relative class name
+    $relative_class = substr($class, $len); //echo '<br>' . $relative_class;
+
+    # replace the namespace prefix with the base directory, replace namespace
+    # separators with directory separators in the relative class name, append
+    # with .php
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+	echo '<br>' . $file;
+    # if the file exists, require it
+    if (file_exists($file)) require $file;   
+});
 ```
 
 ### Output
 | Class           | Fail                                |
 | --------------- | ----------------------------------- |
-| $class->Mulakan | $fail->aplikasi/pustaka/Mulakan.php |
-| $class->index   | $fail->aplikasi/kawal/index.php     |
-| $class->Kawal   | $fail->aplikasi/pustaka/Kawal.php   |
-
-> Ini class Index extends Kawal 
-
-| Class           | Fail                                      |
-| --------------- | ------------------------------------------|
-| $class->Papar       | $fail->aplikasi/pustaka/Papar.php     |
-| $class->Index_Tanya | $fail->aplikasi/tanya/index_tanya.php |
-| $class->Tanya       | $fail->aplikasi/pustaka/Tanya.php     |
-
-> Ini class Index_Tanya extends Tanya 
-
-| Class           | Fail                                           |
-| --------------- | -----------------------------------------------|
-|$class->PangkalanData | $fail->aplikasi/pustaka/PangkalanData.php |
+| nama class:Ayam | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Ayam.php|
+| namespace Foo\Bar | class Ayam |
+| nama class:Baz | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Baz.php |
+| namespace Foo\Bar | class Baz |
+| nama class:Qux\Quux | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Qux/Quux.php |
+| namespace Foo\Bar | class Quux |
 
 ----
 ## Motivation / Motivasi
