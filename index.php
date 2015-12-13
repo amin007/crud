@@ -52,13 +52,13 @@ spl_autoload_register(function ($class)
     # separators with directory separators in the relative class name, append
     # with .php
     $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
-	echo '<br>' . $file;
+	echo '<br> nama class:' . $relative_class . ' | fail:' . $file;
     # if the file exists, require it
-    if (file_exists($file)) require $file;
-    
+    if (file_exists($file)) require $file;   
 });
 
 # 5. istihar class 
+//new \Foo\Bar\Mulakan;
 new \Foo\Bar\Ayam;
 new \Foo\Bar\Baz;
 new \Foo\Bar\Qux\Quux;
