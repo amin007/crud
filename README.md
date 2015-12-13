@@ -38,11 +38,17 @@ spl_autoload_register(function ($class)
 | Class           | Fail                                |
 | --------------- | ----------------------------------- |
 | nama class:Ayam | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Ayam.php|
-| namespace Foo\Bar | class Ayam |
+> namespace Foo\Bar | class Ayam
+
+| Class           | Fail                                |
+| --------------- | ----------------------------------- |
 | nama class:Baz | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Baz.php |
-| namespace Foo\Bar | class Baz |
+> namespace Foo\Bar | class Baz 
+
+| Class           | Fail                                |
+| --------------- | ----------------------------------- |
 | nama class:Qux\Quux | fail:D:\xampp\htdocs\imgekonomi\crud/aplikasi/pustaka/vendor/foo.bar/src/Qux/Quux.php |
-| namespace Foo\Bar | class Quux |
+> namespace Foo\Bar | class Quux 
 
 ----
 ## Motivation / Motivasi
