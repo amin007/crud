@@ -37,7 +37,7 @@ spl_autoload_register(function ($class)
     $prefix = 'Foo\\Bar\\'; //echo '<br>' . $prefix;
 
     # base directory for the namespace prefix
-    $base_dir = __DIR__ . '/' . PUSTAKA . 'vendor/foo.bar/src/'; echo '<br>' . $base_dir;
+    $base_dir = __DIR__ . '/' . PUSTAKA . 'vendor/foo.bar/src/'; //echo '<br>' . $base_dir;
 
     # does the class use the namespace prefix?
     $len = strlen($prefix); //echo '<br>' . $len;
@@ -46,7 +46,7 @@ spl_autoload_register(function ($class)
         return;
 
     # get the relative class name
-    $relative_class = substr($class, $len); echo '<br>' . $relative_class;
+    $relative_class = substr($class, $len); //echo '<br>' . $relative_class;
 
     # replace the namespace prefix with the base directory, replace namespace
     # separators with directory separators in the relative class name, append
