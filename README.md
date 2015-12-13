@@ -1,5 +1,5 @@
 ## Synopsis / Penerangan
-Langkah asas untuk fahamkan **mvc melayu**
+Langkah asas untuk memahami **mvc melayu**
 
 ----
 ## Code Example / Contoh Kod
