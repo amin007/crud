@@ -7,29 +7,27 @@ Langkah asas untuk memahami **mvc melayu**
 ### fungsi __autoload
 ```php
 # guna contoh http://www.php-fig.org/psr/psr-4/examples/
-spl_autoload_register(function ($class) 
+spl_autoload_register(function ($namaClass) 
 {
-    # project-specific namespace prefix
+    # tentukan namespace 
     $prefix = 'Foo\\Bar\\'; //echo '<br>' . $prefix;
 
-    # base directory for the namespace prefix
+    # folder asas bagi namespace prefix
     $base_dir = __DIR__ . '/' . PUSTAKA . 'vendor/foo.bar/src/'; //echo '<br>' . $base_dir;
 
     # does the class use the namespace prefix?
     $len = strlen($prefix); //echo '<br>' . $len;
-    if (strncmp($prefix, $class, $len) !== 0) 
+    if (strncmp($prefix, $namaClass, $len) !== 0) 
         # no, move to the next registered autoloader
         return;
 
-    # get the relative class name
-    $relative_class = substr($class, $len); //echo '<br>' . $relative_class;
+    # dapatkan nama class tanpa namespace
+    $class = substr($namaClass, $len); //echo '<br>' . $relative_class;
 
-    # replace the namespace prefix with the base directory, replace namespace
-    # separators with directory separators in the relative class name, append
-    # with .php
-    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
-	echo '<br>' . $file;
-    # if the file exists, require it
+	# dapatkan fail class tanpa namespace
+    $file = $base_dir . str_replace('\\', '/', $class) . '.php';
+	echo '<br> nama class:' . $class . ' | fail:' . $file;
+    # jika fail wujud, masukkan 
     if (file_exists($file)) require $file;   
 });
 ```
