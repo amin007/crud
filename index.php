@@ -27,10 +27,10 @@ require 'tatarajah2.php';
  */
 spl_autoload_register(function ($namaClass) 
 {
-    # project-specific namespace prefix
+    # tentukan namespace 
     $prefix = 'Foo\\Bar\\'; //echo '<br>' . $prefix;
 
-    # base directory for the namespace prefix
+    # folder asas bagi namespace prefix
     $base_dir = __DIR__ . '/' . PUSTAKA . 'vendor/foo.bar/src/'; //echo '<br>' . $base_dir;
 
     # does the class use the namespace prefix?
@@ -45,7 +45,7 @@ spl_autoload_register(function ($namaClass)
 	# dapatkan fail class tanpa namespace
     $file = $base_dir . str_replace('\\', '/', $class) . '.php';
 	echo '<br> nama class:' . $class . ' | fail:' . $file;
-    # if the file exists, require it
+    # jika fail wujud, masukkan 
     if (file_exists($file)) require $file;   
 });
 
