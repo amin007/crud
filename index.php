@@ -10,7 +10,8 @@
  */
  
 # 1. laporan tahap kesilapan kod PHP
-error_reporting(E_ALL);
+error_reporting(E_ALL); # Turn on error reporting 
+//error_reporting(0); # Turn off error reporting 
  
 # 2. isytiharkan zon masa => Asia/Kuala Lumpur
 date_default_timezone_set('Asia/Kuala_Lumpur');
