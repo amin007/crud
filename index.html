@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Crud by amin007</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Crud</h1>
+        <p>Langkah asas untuk fahamkan mvc melayu</p>
+        <p class="view"><a href="https://github.com/amin007/crud">View the Project on GitHub <small>amin007/crud</small></a></p>
+        <ul>
+          <li><a href="https://github.com/amin007/crud/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/amin007/crud/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/amin007/crud">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="synopsis--penerangan" class="anchor" href="#synopsis--penerangan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Synopsis / Penerangan</h2>
+
+<p>Langkah asas untuk memahami <strong>mvc melayu</strong></p>
+
+<hr>
+
+<h2>
+<a id="code-example--contoh-kod" class="anchor" href="#code-example--contoh-kod" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Example / Contoh Kod</h2>
+
+<h3>
+<a id="fungsi-__autoload" class="anchor" href="#fungsi-__autoload" aria-hidden="true"><span class="octicon octicon-link"></span></a>fungsi __autoload</h3>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">function</span> <span class="pl-c1">__autoload</span>(<span class="pl-smi">$class</span>)</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-smi">$cariFail</span> <span class="pl-k">=</span> classFolder(<span class="pl-smi">$class</span>);</span>
+<span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;br&gt;Utama :: class <span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$class</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span> | fail=&gt;<span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$cariFail</span>;</span>
+<span class="pl-s1">    <span class="pl-k">if</span> (<span class="pl-c1">isset</span>(<span class="pl-smi">$cariFail</span>[<span class="pl-c1">0</span>])) </span>
+<span class="pl-s1">    {   <span class="pl-k">require</span> <span class="pl-smi">$cariFail</span>[<span class="pl-c1">0</span>];</span>
+<span class="pl-s1">        <span class="pl-k">if</span> (<span class="pl-k">!</span><span class="pl-c1">class_exists</span>(<span class="pl-smi">$class</span>)): </span>
+<span class="pl-s1">            <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;br&gt;class <span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$class</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span> tak wujud&lt;br&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">        <span class="pl-k">endif</span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    <span class="pl-k">else</span> <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>fail class <span class="pl-pds">'</span></span> <span class="pl-k">.</span> <span class="pl-smi">$class</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span> tidak wujud &lt;br&gt;<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">}</span></pre></div>
+
+<h3>
+<a id="output" class="anchor" href="#output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output</h3>
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$class-&gt;Mulakan</td>
+<td>$fail-&gt;aplikasi/pustaka/Mulakan.php</td>
+</tr>
+<tr>
+<td>$class-&gt;index</td>
+<td>$fail-&gt;aplikasi/kawal/index.php</td>
+</tr>
+<tr>
+<td>$class-&gt;Kawal</td>
+<td>$fail-&gt;aplikasi/pustaka/Kawal.php</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Ini class Index extends Kawal </p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$class-&gt;Papar</td>
+<td>$fail-&gt;aplikasi/pustaka/Papar.php</td>
+</tr>
+<tr>
+<td>$class-&gt;Index_Tanya</td>
+<td>$fail-&gt;aplikasi/tanya/index_tanya.php</td>
+</tr>
+<tr>
+<td>$class-&gt;Tanya</td>
+<td>$fail-&gt;aplikasi/pustaka/Tanya.php</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Ini class Index_Tanya extends Tanya </p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$class-&gt;PangkalanData</td>
+<td>$fail-&gt;aplikasi/pustaka/PangkalanData.php</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>
+<a id="motivation--motivasi" class="anchor" href="#motivation--motivasi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation / Motivasi</h2>
+
+<ul>
+<li>Untuk memertabatkan bahasa melayu dalam dunia programing</li>
+</ul>
+
+<h2>
+<a id="installation--pemasangan" class="anchor" href="#installation--pemasangan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation / Pemasangan</h2>
+
+<ul>
+<li>Muat turun dan buka fail zip</li>
+</ul>
+
+<h2>
+<a id="api-reference--rujukan-api" class="anchor" href="#api-reference--rujukan-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Reference / Rujukan API</h2>
+
+<ul>
+<li>Belum ada idea mahu tulis.</li>
+</ul>
+
+<h2>
+<a id="tests--ujian" class="anchor" href="#tests--ujian" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests / Ujian</h2>
+
+<ul>
+<li>Belum ada idea mahu tulis.</li>
+</ul>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li>Belum ada idea mahu tulis.</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<ul>
+<li>Belum ada idea mahu tulis.</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<ul>
+<li>10 Disember 2015 - Asyik berubah2 hari ini</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="kredit" class="anchor" href="#kredit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kredit</h2>
+
+<ul>
+<li><a href="https://github.com/JREAM">JREAM</a></li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/amin007">amin007</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
